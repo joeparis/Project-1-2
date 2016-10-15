@@ -1,0 +1,19 @@
+html {
+  font-size: 100%; /*should be 16pt by default */
+  font-family: 'Old Standard TT', serif;
+  background-color: rbg(90, 90, 90);
+}
+
+body {
+  margin: 6rem;
+  max-width: 70rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', serif;
+}
+
+figure {
+  margin-left: auto;
+  margin-right: auto;
+}
