@@ -1,0 +1,15 @@
+body {
+      background-image: url("/Users/albertomartinez/Documents/Javascript_2/Project_2/pirateShip.jpg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-attachment: fixed;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FFFFFF;
+    font-family: 'Pirata One', cursive;
+  }
+
+p {
+  color: #FFFFFF;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="/Users/albertomartinez/Documents/Javascript_2/Project_2/regularExpressions.css">
+      <link href="https://fonts.googleapis.com/css?family=Pirata+One" rel="stylesheet">
+      <title>Pirate Translator</title>
+    </head>
+    <body>
+        <div align="center">
+            <h1>Pirate Translator</h1>
+            <!-- The code below creates a text box where the user can enter text to be translated. -->
+            <textarea rows="5" cols="50" id="myText">Enter your text then push the "translate" button to see your translation.</textarea><br />
+            <!-- The code below creates a button for the user -->
+            <button type="button" onclick="myFunction()" class="button">Translate</button>
+            <p id="output"></p>
+            <!-- I decided to keep the code in this HTML file because I thought it was too short to have it's own file.
+                 It takes the text that was entered in box and replaces certain words with "pirate words".
+                 The words that were replace were taken from a link provided for this assignment. -->
+            <script>
+            function myFunction() {
+                var x = document.getElementById("myText").value;
+                var y = x.replace(/yes/gi, "aye").replace(/my/gi, "me").replace(/friend/gi, "bucko").replace(/your/gi, "ye").replace(/you're/gi, "ye").replace(/hello/gi, "ahoy").replace(/stop/gi, "avast").replace(/eyes/gi, "deadlights").replace(/quickly/gi, "smartly").replace(/carefully/gi, "handsomely").replace(/stranded/gi, "marooned").replace(/boy/gi, "lad").replace(/girl/gi, "lass").replace(/clean/gi, "swab").replace(/treasure/gi, "bootey").replace(/reward/gi, "bounty").replace(/eggs?/gi, "cackle fruit").replace(/hang/gi, "dance the hempen jig").replace(/is/gi, "be");
+                document.getElementById("output").innerHTML = y;
+            }
+            </script>
+        </div>
+    </body>
+</html>
