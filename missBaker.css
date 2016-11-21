@@ -1,19 +1,98 @@
 html {
   font-size: 100%; /*should be 16pt by default */
   font-family: 'Old Standard TT', serif;
-  background-color: rbg(90, 90, 90);
+  background-color: #FFFFFF;
+  -webkit-box-sizing: border-box;
+  -webkit-flex-rection: row;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -o-background-size: border-box;
 }
 
-body {
-  margin: 6rem;
-  max-width: 70rem;
+h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 52px;
+  border-bottom: 2px solid #000000;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif;
 }
 
-figure {
-  margin-left: auto;
-  margin-right: auto;
+img {
+  display: block;
 }
+
+#main {
+    width: 100%;
+    min-height: 100vh:
+    margin: 0px auto;
+    flex: 1 0 200px;
+    display: flex;
+    flex-flow: row;
+}
+
+#main > nav {
+    margin: 2px;
+    padding: 1px;
+    background: rgba(50,50,47,.06);
+    flex: 1 0 100px;
+    order: 1;
+    max-height: auto;
+}
+
+#main > article {
+    background: rgba(50,50,47,.06);
+    flex: 1 0 200px;
+    order: 2;
+    max-height: auto;
+}
+
+#main > aside {
+    margin: 2px;
+    padding: 1px;
+    background: rgba(50,50,47,.06);
+    flex: 1 0 100px;
+    order: 3;
+    max-height: auto;
+}
+
+header, footer {
+    display: block;
+    border-top: 1px solid #000000;
+    margin: 2px;
+    padding: 2px;
+    min-height: 200px;
+    background: rgba(50,50,47,.06);
+  }
+
+  @viewport {
+    width: extend-to-zoom 980px;
+    min-zoom: 0.25;
+    max-zoom: 5;
+}
+
+  @media all and (min-width: 540px) {
+      #main > article {
+        border-right: 1px solid rgba(119,120,116,.63);
+        border-left: 1px solid rgba(119,120,116,.63);
+        margin: 4px;
+        padding: 7px;
+      }
+  }
+
+  /* Too narrow to support three columns */
+  @media all and (max-width: 640px) {
+      #main, #page {
+          flex-direction: column;
+      }
+
+      #main > nav, #main > article, #main > aside {
+      /* Return them to document order */
+          order: 0;
+      }
+
+      #main > article, #main > nav, #main > aside, header, footer {
+          line-height: normal;
+      }
+  }
